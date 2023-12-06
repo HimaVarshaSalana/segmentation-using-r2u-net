@@ -1,0 +1,52 @@
+
+{% extends "R2UNET/base.html" %}
+
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class = "card-container">
+  <div class="card">
+    <img src="..\..\media\test_image.png" alt="input_image">
+    <center><h3>Input Image</h3></center>
+  </div> 
+
+  <div class="card">
+    <img src="..\..\media\test_preprocessed_image.png" alt="preprocessed_img" width = "400px">
+    <center><h3>Preprocessed Image</h3></center>
+  </div>
+
+  <div class="card">
+    <img src="..\..\media\test_SR.png" alt="SR_img" width = "400px">
+    <center><h3>Segmentation Result</h3></center>
+  </div>
+</div>
+</body>
+</html>
+
+
+{% endblock content %}

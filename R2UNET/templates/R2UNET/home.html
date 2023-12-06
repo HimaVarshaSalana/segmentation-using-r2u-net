@@ -1,0 +1,45 @@
+{% extends "R2UNET/base.html" %}
+{% block content %}
+
+   
+  
+   <header>
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('https://media.istockphoto.com/vectors/abstract-blue-background-geometric-texture-vector-id1279615641?k=20&m=1279615641&s=612x612&w=0&h=Tp2rx9735xlF9w4ceigPwTyxumSttQf1JWR2gsje2c8=');
+        height: 400px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">DIABETIC RETINOPATHY</h1>
+            <h4 class="mb-3">RETINAL VESSEL SEGMENTATION USING R2U-NET</h4>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      {% if user.is_authenticated %}
+      <a class="btn btn-outline-light btn-lg" href="{% url 'app-form' %}" role="button">START</a>
+    </div>
+    <!-- Background image -->
+  </header>
+
+  <br><br><br>
+
+<br><br><br>
+
+
+
+{% else %}
+<a class="btn btn-outline-light btn-lg" href="{% url 'register' %}" role="button">Register</a>
+
+<a class="btn btn-outline-light btn-lg" href="{% url 'login' %}" role="button">Login</a>
+
+
+
+{% endif %}
+{% endblock content %}
